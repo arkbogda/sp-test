@@ -10,10 +10,8 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "page-info")
 public class PageInfo {
 
-    @Value("${page-info.author}")
     private String author;
 
-    @Value("${page-info.creation-date}")
     private int creationDate; //może być int, automatycznie zamienia typy z application.properties
 
     @EventListener(ApplicationReadyEvent.class)
