@@ -15,7 +15,7 @@ public class MessageService {
     public MessageService(MessageSource messageSource) {
         this.messageSource = messageSource;
 
-        String text = messageSource.getMessage("hello", new Object[]{}, Locale.ENGLISH.forLanguageTag("pl"));
+        String text = messageSource.getMessage("hello", new Object[]{"John", "Doe"}, Locale.forLanguageTag("pl")); //Locale.POLISH is unsupported
         System.out.println(text);
     }
 }
